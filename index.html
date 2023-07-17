@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <title>Document</title>
+    \
+
+    <style>
+      .box {
+        border: 1px solid tomato;
+      }
+      .bat {
+        transition: transform 0.2s;
+      }
+
+      .ball {
+        height: 50px;
+        width: 50px;
+        background-color: red;
+        border-radius: 50%;
+        position: relative;
+        left: 32rem;
+        transition: transform 1s ease-out 0.2s;
+      }
+
+      .box:hover img {
+        transform: rotate(-60deg);
+        transform-origin: top right;
+      }
+      .box:hover .ball {
+        transform: translate(60rem, -30rem);
+      }
+      @media screen and (max-width: 576px) {
+        .box {
+          width: 100%;
+        }
+        .bat {
+          width: 30%;
+        }
+        .ball {
+          height: 20px;
+          width: 20px;
+          background-color: red;
+          border-radius: 50%;
+          transition: transform 1s ease-out 0.2s;
+          left: 11.5rem;
+        }
+        .box:hover .ball {
+          transform: translate(25rem, -15rem);
+        }
+      }
+    </style>
+  </head>
+  <body class="div-container">
+    <div class="box">
+      <img class="bat" src="images/bat.png" alt="" />
+      <div class="ball"></div>
+
+    </div>
+    <h1>Hover the cricket bat</h1>
+  </body>
+</html>
